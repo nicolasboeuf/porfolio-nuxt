@@ -8,9 +8,9 @@
 
       <div id="nav">
         
-        <div class="nav_btn">{{$t('nav.projets')}}</div>
-        <div class="nav_btn">{{$t('nav.parcours')}}</div>
-        <div class="nav_btn">{{$t('nav.contact')}}</div>
+        <div class="nav_btn">{{$t('app.projets')}}</div>
+        <div class="nav_btn">{{$t('app.parcours')}}</div>
+        <div class="nav_btn">{{$t('app.contact')}}</div>
 
       </div>
 

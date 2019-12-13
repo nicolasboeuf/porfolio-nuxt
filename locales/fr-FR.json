@@ -1,10 +1,7 @@
 {
 
   "app": {
-    "title":"Mon titre"
-  },
-  "nav":{
-  	"projets":"Projets",
+    "projets":"Projets",
   	"parcours":"Parcours",
   	"contact":"Contact"
   }
