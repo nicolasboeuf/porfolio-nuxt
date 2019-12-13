@@ -1,6 +1,6 @@
 <template>
 
-	<div id="myComponent">
+	<div id="headerComponent">
   
   </div>
 
@@ -14,7 +14,7 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
 
-  name: "myComponent",
+  name: "headerComponent",
 
   components: {
   },
@@ -56,7 +56,7 @@ export default {
   @import "~assets/scss/_variables.scss";
   @import "~assets/scss/_browsers.scss";
 
-  #myComponent{
+  #headerComponent{
   	position: relative;
   	width: 100%;
   	height: 75px;
@@ -65,7 +65,7 @@ export default {
   
   @media screen and (min-width: 768px){
 
-  	#myComponent{
+  	#headerComponent{
   	
     }
 

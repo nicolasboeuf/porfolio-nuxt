@@ -12,6 +12,8 @@ export const state = () => ({
   locale: undefined, 
   locales: undefined, 
 
+  data : {}
+
 })
 
 export const getters = {
@@ -46,6 +48,10 @@ export const mutations = {
     //console.log("S-index-M-switchLocale / localeObject : ", localeObject)
     state.locale = localeObject.code
     // this.$i18n.locale = localeObject.code
+  },
+
+  populateData(state,datas){
+    state.data = datas
   },
 
 }
