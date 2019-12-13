@@ -4,10 +4,27 @@ $blue: #4589a2;
 $deepBlue: #0d4e7c;
 $orange:#e95522;
 
+
 @font-face {
-    font-family: 'robotoblack';
-    src: url('~static/fonts/roboto-black-webfont.woff2') format('woff2'),
-         url('~static/fonts/roboto-black-webfont.woff') format('woff');
+    font-family: 'rubikmedium';
+    src: url('~static/fonts/rubik-medium-webfont.woff2') format('woff2'),
+         url('~static/fonts/rubik-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rubikregular';
+    src: url('~static/fonts/rubik-regular-webfont.woff2') format('woff2'),
+         url('~static/fonts/rubik-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rubiklight';
+    src: url('~static/fonts/rubik-light-webfont.woff2') format('woff2'),
+         url('~static/fonts/rubik-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

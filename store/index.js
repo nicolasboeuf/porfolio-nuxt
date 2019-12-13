@@ -50,6 +50,10 @@ export const mutations = {
     // this.$i18n.locale = localeObject.code
   },
 
+  switchLocaleFromBtn(state, localeCode) {
+    state.locale = localeCode
+  },
+
   populateData(state,datas){
     state.data = datas
   },
