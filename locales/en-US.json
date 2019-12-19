@@ -3,7 +3,9 @@
   "app": {
     "projets":"Projects",
   	"parcours":"Career",
-  	"contact":"Contact"
+  	"contact":"Contact",
+  	"reutiliser":"Get the code on GitHub",
+  	"telecharger":"Download my resume (PDF)"
   }
   
 }

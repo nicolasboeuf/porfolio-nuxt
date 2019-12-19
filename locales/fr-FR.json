@@ -1,9 +1,9 @@
 {
-
   "app": {
     "projets":"Projets",
   	"parcours":"Parcours",
-  	"contact":"Contact"
+  	"contact":"Contact",
+  	"reutiliser":"Réutiliser le code sur Github",
+  	"telecharger":"Télécharger mon CV (PDF)"
   }
-  
 }

@@ -26,13 +26,13 @@
             
         </section>
 
-        <section class="main" id="parcours" :data-lang="locale">
+        <section class="main" id="parcours">
 
           <div class="content_wrapper">
             
             <h1>{{$t('app.parcours')}}</h1>
 
-            <div class="lang_wrapper" data-lang="fr">
+            <div class="lang_wrapper" v-if="locale==='fr'">
 
               <div class="svg_container" data-svg="desktop">
                 
@@ -48,7 +48,7 @@
 
             </div>
 
-            <div class="lang_wrapper" data-lang="en">
+            <div class="lang_wrapper" v-if="locale==='en'">
 
               <div class='svg_container' data-svg="desktop">
 
@@ -65,6 +65,57 @@
             </div>
 
           </div>          
+
+        </section>
+
+        <section class="main" id="contact">
+
+          <div class="content_wrapper">
+            
+            <h1>{{$t('app.contact')}}</h1>
+
+            <div class="contact_box">
+              <img class="contact_picto" src="~/assets/img/picto-mail.svg"/>
+              <div class="contact_text" data-text="mail" :class="(feedbackCopy)?'feedback':''" @click="copyMail()">nicolas_boeuf@hotmail.fr</div>
+            </div>
+
+            <div class="contact_box">
+              <img class="contact_picto" src="~/assets/img/picto-phone.svg"/>
+              <a href="tel:0033608111730">
+                <div class="contact_text">06 08 11 17 30</div>
+              </a>
+            </div>
+
+            <div class="contact_box">
+              <img class="contact_picto" src="~/assets/img/picto-twitter.svg"/>
+              <a href="https://twitter.com/nicolas_boeuf" target="_blank" nofollow>
+                <div class="contact_text">@nicolas_boeuf</div>
+              </a>
+            </div>
+
+            <div class="contact_box">
+              <img class="contact_picto" src="~/assets/img/picto-github.svg"/>
+              <a href="https://github.com/nicolasboeuf/porfolio-nuxt" target="_blank" nofollow>
+                <div class="contact_text">{{$t('app.reutiliser')}}</div>
+              </a>
+            </div>
+
+            <div class="contact_box" v-if="locale==='fr'">
+              <img class="contact_picto" data-picto="dl" src="~/assets/img/picto-dl.svg"/>
+              <a href="downloads/cv-2020.pdf" download>
+                <div class="contact_text">{{$t('app.telecharger')}}</div>
+              </a>
+            </div>
+
+            <div class="contact_box" v-if="locale==='en'">
+              <img class="contact_picto" data-picto="dl" src="~/assets/img/picto-dl.svg"/>
+              <a href="downloads/cv-2020-en.pdf" download>
+                <div class="contact_text">{{$t('app.telecharger')}}</div>
+              </a>
+            </div>
+
+          </div>
+          
 
         </section>
 
@@ -110,7 +161,8 @@ export default {
   
   data() {
     return {
-      slugify:slugify
+      slugify:slugify,
+      feedbackCopy:false
     }
   },
 
@@ -133,6 +185,20 @@ export default {
   },
 
   methods: {
+
+    copyMail(){
+      var self = this
+      const el = document.createElement('textarea');
+      el.value = "nicolas_boeuf@hotmail.fr"
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      this.feedbackCopy = true
+      setTimeout(function(){
+        self.feedbackCopy = false
+      },2000)
+    }
 
   },
 
@@ -287,20 +353,64 @@ export default {
             }
           }
         }
-        &[data-lang="fr"]{
-          .lang_wrapper[data-lang="fr"]{
+      }
+      &#contact{
+        background-color: $grey;
+        padding-top: 50px;
+        padding-bottom: 150px;
+        .content_wrapper{
+          h1{
+            margin-bottom: 50px;
+          }
+          .contact_box{
             display: block;
-          }
-          .lang_wrapper[data-lang="en"]{
-            display: none;
-          }
-        }
-        &[data-lang="en"]{
-          .lang_wrapper[data-lang="fr"]{
-            display: none;
-          }
-          .lang_wrapper[data-lang="en"]{
-            display: block;
+            text-align: left;
+            padding-left: 95px;
+            margin-bottom: 30px;
+            .contact_picto{
+              width: 30px;
+              display: inline-block;
+              margin-right: 20px;
+              position: relative;
+              top:5px;
+              &[data-picto="dl"]{
+                top:3px;
+              }
+            }
+            .contact_text{
+              display: inline-block;
+              font-family: "rubikregular";
+              font-size: 30px;
+              color:$blue;
+              cursor: pointer;
+              position: relative;
+              &[data-text="mail"]{
+                &:after{
+                  content: "Copié dans le presse-papier !";
+                  font-family: "rubiklight";
+                  font-size: 15px;
+                  color:$orange;
+                  position:absolute;
+                  top:10px;
+                  width: 250px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  display: block;
+                  left:100%;
+                  margin-left: 10px;
+                  @include transition(all(0.2s ease-in-out));
+                  opacity: 0;
+                }
+              }
+              &.feedback{
+                &:after{
+                  opacity: 1;
+                }
+              }
+              &:hover{
+                color: $deepBlue;
+              }
+            }
           }
         }
       }
@@ -364,6 +474,30 @@ export default {
               }
               &[data-svg="desktop"]{
                 display: none;
+              }
+            }
+          }
+        }
+        &#contact{
+          .content_wrapper{
+            .contact_box{
+              padding-left: 15px;
+              .contact_picto{
+                width: 30px;
+                margin-right: 10px;
+              }
+              .contact_text{
+                font-size: 22px;
+                &[data-text="mail"]{
+                  &:after{
+                    top:25px;
+                    left:0;
+                    margin-left: 0px;
+                  }
+                }
+                &:hover{
+                  color: $blue;
+                }
               }
             }
           }
