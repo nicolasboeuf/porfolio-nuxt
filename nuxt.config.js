@@ -87,23 +87,19 @@ export default {
       },
       {
         property: 'og:url',
-        content: ''
+        content: 'http://nicolasboeuf.fr/'
       },
       {
         property: 'og:title',
-        content: ''
+        content: 'Nicolas Boeuf'
       },
       {
         property: 'og:image',
-        content: ''
+        content: 'http://nicolasboeuf.fr/og-share.jpg'
       },
       {
         property: 'og:description',
-        content: ''
-      },
-      {
-        property: 'og:app_id',
-        content: ''
+        content: 'Datajournaliste et dévelopeur indépendant'
       },
       {
         property: 'twitter:card',
@@ -111,14 +107,14 @@ export default {
       },
       {
         property: 'twitter:image',
-        content: ''
+        content: 'http://nicolasboeuf.fr/og-share.jpg'
       }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
     ],
     script: [
-     //{ defer:true, src: 'https://www.googletagmanager.com/gtag/js?id=UA-51867236-7' }
+     { defer:true, src: 'https://www.googletagmanager.com/gtag/js?id=UA-154669475-1' }
    ]
   },
 
@@ -151,7 +147,7 @@ export default {
   ** Customize the progress-bar color
   */
   loading: { 
-    color: '#fff' 
+    color: '#e95522' 
   },
 
   /*
