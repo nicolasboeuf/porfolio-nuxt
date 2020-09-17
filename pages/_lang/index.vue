@@ -109,7 +109,7 @@
 
             <div class="contact_box" v-if="locale==='en'">
               <img class="contact_picto" data-picto="dl" src="~/assets/img/picto-dl.svg"/>
-              <a href="downloads/cv-2020-en.pdf" download>
+              <a href="../downloads/cv-2020-en.pdf" download>
                 <div class="contact_text">{{$t('app.telecharger')}}</div>
               </a>
             </div>

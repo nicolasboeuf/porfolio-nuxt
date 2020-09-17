@@ -74,12 +74,12 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: "",
+    titleTemplate: "Nicolas Boeuf",
     meta: [
       { charset: 'utf-8' },
-      { hid: 'description', name: 'description', content: ""},
+      { hid: 'description', name: 'description', content: "Datajournaliste et dévelopeur indépendant"},
       { 'http-equiv': 'Content-Type', content: 'text/html', charset: 'utf-8' },
-      { name: 'author', content: 'Wedodata' },
+      { name: 'author', content: 'Nicolas Boeuf' },
       { name: 'robots', content: 'follow, index' },
       {
         property: 'og:type', 
@@ -99,7 +99,7 @@ export default {
       },
       {
         property: 'og:description',
-        content: 'Datajournaliste et dévelopeur indépendant'
+        content: 'Datajournaliste et développeur indépendant'
       },
       {
         property: 'twitter:card',
@@ -114,7 +114,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
     ],
     script: [
-     { defer:true, src: 'https://www.googletagmanager.com/gtag/js?id=UA-154669475-1' }
+     //{ defer:true, src: 'https://www.googletagmanager.com/gtag/js?id=UA-154669475-1' }
    ]
   },
 

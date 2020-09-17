@@ -8,9 +8,9 @@
 
       <div id="nav">
         
-        <div class="nav_btn">{{$t('app.projets')}}</div>
-        <div class="nav_btn">{{$t('app.parcours')}}</div>
-        <div class="nav_btn">{{$t('app.contact')}}</div>
+        <div class="nav_btn" @click="scrollTo('projects')" >{{$t('app.projets')}}</div>
+        <div class="nav_btn" @click="scrollTo('parcours')">{{$t('app.parcours')}}</div>
+        <div class="nav_btn" @click="scrollTo('contact')">{{$t('app.contact')}}</div>
 
       </div>
 
@@ -72,6 +72,13 @@ export default {
   },
 
   methods: {
+
+    scrollTo(element){
+
+      var elmnt = document.getElementById(element);
+      elmnt.scrollIntoView({ behavior: 'smooth'});
+
+    },
 
   },
 
