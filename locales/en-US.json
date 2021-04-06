@@ -2,6 +2,8 @@
 
   "app": {
     "projets":"Projects",
+    "freelance":"Made as freelance",
+    "wedodata":"Made at Wedodata",
   	"parcours":"Career",
   	"contact":"Contact",
   	"reutiliser":"Get the code on GitHub",
