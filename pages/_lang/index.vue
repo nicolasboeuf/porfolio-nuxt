@@ -335,6 +335,9 @@ export default {
                 &[data-id="15"]{
                   background-image: url("~assets/img/projets/15.png");  
                 }
+                &[data-id="16"]{
+                  background-image: url("~assets/img/projets/16.png");  
+                }
               }
               .projet_label{
                 text-align: center;
