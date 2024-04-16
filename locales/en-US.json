@@ -7,7 +7,11 @@
   	"parcours":"Career",
   	"contact":"Contact",
   	"reutiliser":"Get the code on GitHub",
-  	"telecharger":"Download my resume (PDF)"
+  	"telecharger":"Download my resume (PDF)",
+    "presentation":"Intro",
+    "datajournaliste":"I'm a freelance datajournalist and developer",
+    "realise":"I build all types of projects with data: I design and code visualization web applications as well as clear and readable dashboards, I develop cartographic sites, I create fixed or interactive infographics for newspapers or books.",
+    "enseigne":"I teach at Sciences Po's school of journalism."
   }
   
 }

@@ -6,6 +6,10 @@
     "wedodata":"Réalisés chez Wedodata",
   	"contact":"Contact",
   	"reutiliser":"Réutiliser le code sur Github",
-  	"telecharger":"Télécharger mon CV (PDF)"
+  	"telecharger":"Télécharger mon CV (PDF)",
+    "presentation":"Présentation",
+    "datajournaliste":"Je suis datajournaliste et développeur de datavisualisations indépendant.",
+    "realise":"Je réalise tout type de projets avec des données : je conçois et code des applications web de visualisations et des tableaux de bord clairs et lisibles, je développe des sites cartographiques, je crée des infographies fixes ou interactives pour des journaux ou des livres.",
+    "enseigne":"J’enseigne à l’école de journalisme de Sciences Po."
   }
 }

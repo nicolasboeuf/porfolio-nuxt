@@ -82,6 +82,10 @@ export default {
       { name: 'author', content: 'Nicolas Boeuf' },
       { name: 'robots', content: 'follow, index' },
       {
+        property: 'description', 
+        content: 'Datajournaliste et dévelopeur indépendant'
+      },
+      {
         property: 'og:type', 
         content: 'website'
       },

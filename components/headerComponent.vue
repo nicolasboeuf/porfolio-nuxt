@@ -8,8 +8,8 @@
 
       <div id="nav">
         
+        <div class="nav_btn" @click="scrollTo('intro')">{{$t('app.presentation')}}</div>
         <div class="nav_btn" @click="scrollTo('projects')" >{{$t('app.projets')}}</div>
-        <div class="nav_btn" @click="scrollTo('parcours')">{{$t('app.parcours')}}</div>
         <div class="nav_btn" @click="scrollTo('contact')">{{$t('app.contact')}}</div>
 
       </div>
